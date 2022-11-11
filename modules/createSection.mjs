@@ -1,4 +1,4 @@
-import createItemsList from "./createCardsList.mjs";
+import createItemsList from "./createItemsList.mjs";
 
 const createSection = (heading, elements) => {
   const h_3 = document.createElement("h3");
