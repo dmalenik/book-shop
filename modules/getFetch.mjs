@@ -1,5 +1,5 @@
-const getFetch = (url, configurations) => {
-  return fetch(url).then((response) => {
+const getFetch = (url, configurations = {}) => {
+  return fetch(url, configurations).then((response) => {
     return response.json();
   });
 };
