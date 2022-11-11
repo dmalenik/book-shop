@@ -1,5 +1,5 @@
 const catalogPath = "./books.json";
-const books = fetch(catalogPath)
+const bookSection = fetch(catalogPath)
   .then((response) => {
     return response.json();
   })
@@ -7,4 +7,4 @@ const books = fetch(catalogPath)
     console.log(data);
   });
 
-export { books };
+export { bookSection };
