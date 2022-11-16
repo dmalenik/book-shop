@@ -9,6 +9,8 @@ const createBooksSection = (heading, data) => {
 
   const section = document.createElement("section");
 
+  section.setAttribute("class", "f-col f-col-center");
+
   section.appendChild(sectionHeading);
   section.appendChild(catalog);
 
