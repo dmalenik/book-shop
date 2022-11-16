@@ -7,12 +7,13 @@ const createBookCard = (obj) => {
 
   const source = document.createElement("source");
 
-  source.setAttribute("srcset", obj.imageLink);
+  // link is created based on main.js path
+  source.setAttribute("srcset", `../../assets/img/${obj.imageLink}`);
   picture.appendChild(source);
 
-  const image = document.createElement("image");
+  const image = document.createElement("img");
 
-  image.setAttribute("src", obj.imageLink);
+  image.setAttribute("src", "../../assets/img/default.png");
   image.setAttribute("alt", obj.title);
   picture.appendChild(image);
 
