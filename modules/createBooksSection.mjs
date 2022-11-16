@@ -1,6 +1,6 @@
 import createCatalog from "./createCatalog.mjs";
 
-const createSection = (heading, data) => {
+const createBooksSection = (heading, data) => {
   const sectionHeading = document.createElement("h3");
 
   sectionHeading.innerText = heading;
@@ -15,4 +15,4 @@ const createSection = (heading, data) => {
   return section;
 };
 
-export default createSection;
+export default createBooksSection;
