@@ -1,14 +1,15 @@
-import createItemsList from "./createItemsList.mjs";
+import createCatalog from "./createCatalog.mjs";
 
-const createSection = (heading, elements) => {
-  const h_3 = document.createElement("h3");
+const createSection = (heading, data) => {
+  const sectionHeading = document.createElement("h3");
 
-  h_3.innerText = heading;
+  sectionHeading.innerText = heading;
 
-  const catalog = createItemsList(elements);
+  const catalog = createCatalog(data);
+
   const section = document.createElement("section");
 
-  section.appendChild(h_3);
+  section.appendChild(sectionHeading);
   section.appendChild(catalog);
 
   return section;

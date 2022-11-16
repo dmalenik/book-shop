@@ -1,6 +1,6 @@
-const getFetch = (url, configurations = {}) => {
-  return fetch(url, configurations).then((response) => {
-    return response.json();
+const getFetch = (url, config = {}) => {
+  return fetch(url, config).then((resp) => {
+    return resp.json();
   });
 };
 

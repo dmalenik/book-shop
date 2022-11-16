@@ -1,3 +1,3 @@
-import container from "./components/container.mjs";
+import container from "../../modules/container.mjs";
 
 document.body.appendChild(container);
