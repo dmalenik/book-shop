@@ -1,9 +1,17 @@
+.f-row {
+  display: flex;
+}
+
 .f-col {
   display: flex;
   flex-direction: column;
 }
 
-.f-col-center {
+.f-x-center {
+  justify-content: center;
+}
+
+.f-y-center {
   align-items: center;
 }
 
@@ -17,6 +25,10 @@
 
 .h-100 {
   height: 100%;
+}
+
+.p-25px {
+  padding: 25px;
 }
 
 .m-auto {

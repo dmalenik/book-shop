@@ -1,7 +1,7 @@
 const createBookCard = (obj) => {
   const card = document.createElement("div");
 
-  card.setAttribute("class", "grid card");
+  card.setAttribute("class", "grid card w-100");
 
   const image = document.createElement("img");
 
