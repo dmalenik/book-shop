@@ -1,13 +1,16 @@
 import getFetch from "./getFetch.mjs";
-import createBooksSection from "./createBooksSection.mjs";
+import createSection from "./createSection.mjs";
+import createCatalog from "./createCatalog.mjs";
 import container from "./container.mjs";
 
 const booksCatalogPath = "../../data/books.json";
 
 const booksCatalog = getFetch(booksCatalogPath).then((data) => {
-  const section = createBooksSection("Books catalog", data);
+  const section = createSection("Books catalog");
+  const catalog = createCatalog(data);
 
-  return container.appendChild(section);
+  section.appendChild(catalog);
+  container.appendChild(section);
 });
 
 export default booksCatalog;
