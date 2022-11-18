@@ -3,7 +3,7 @@ const createSection = (heading, headingSize) => {
 
   sectionHeading.innerText = heading;
 
-  let section = document.createElement("section");
+  const section = document.createElement("section");
 
   section.appendChild(sectionHeading);
 

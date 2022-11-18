@@ -2,7 +2,7 @@ import createBookCard from "./createBookCard.mjs";
 import createEventListener from "./createEventListener.mjs";
 
 const createCatalog = (data) => {
-  let list_unordered = document.createElement("ul");
+  const list_unordered = document.createElement("ul");
 
   list_unordered.setAttribute("class", "grid p-25px catalog nobullets");
 
