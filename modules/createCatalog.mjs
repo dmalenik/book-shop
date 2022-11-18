@@ -24,16 +24,16 @@ const createCatalog = (data) => {
     list_unordered,
     "click",
     (event) => {
-      let parentActiveElement = document.activeElement.parentElement;
+      let activeParent = document.activeElement.parentElement;
 
       if (event.target.classList.contains("more")) {
-        parentActiveElement
+        activeParent
           .querySelector(".b-description")
           .classList.replace("d-hidden", "d-shown");
       }
 
       if (event.target.classList.contains("close")) {
-        parentActiveElement.classList.replace("d-shown", "d-hidden");
+        activeParent.classList.replace("d-shown", "d-hidden");
       }
     }
   );
