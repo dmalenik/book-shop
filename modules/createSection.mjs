@@ -1,11 +1,10 @@
-const createSection = (heading) => {
-  const sectionHeading = document.createElement("h3");
+const createSection = (heading, headingSize) => {
+  const sectionHeading = document.createElement(`h${headingSize}`);
 
   sectionHeading.innerText = heading;
 
   const section = document.createElement("section");
 
-  section.setAttribute("class", "f-col f-y-center");
   section.appendChild(sectionHeading);
 
   return section;
