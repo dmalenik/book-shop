@@ -1,9 +1,9 @@
 const createSection = (heading, headingSize) => {
-  const sectionHeading = document.createElement(`h${headingSize}`);
+  let sectionHeading = document.createElement(`h${headingSize}`);
 
   sectionHeading.innerText = heading;
 
-  const section = document.createElement("section");
+  let section = document.createElement("section");
 
   section.appendChild(sectionHeading);
 
