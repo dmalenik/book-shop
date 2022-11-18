@@ -1,4 +1,4 @@
-import booksCatalog from "./booksCatalog.mjs";
+import booksCatalog from "./books-catalog.mjs";
 
 const container = document.createElement("div");
 

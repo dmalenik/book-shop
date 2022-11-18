@@ -1,7 +1,9 @@
+import createSection from "./createSection.mjs";
+
 const createBookCard = (obj) => {
   const card = document.createElement("div");
 
-  card.setAttribute("class", "grid card w-100");
+  card.setAttribute("class", "grid pos-relative card w-100");
 
   const image = document.createElement("img");
 
@@ -27,6 +29,25 @@ const createBookCard = (obj) => {
   price.innerText = `Price: $${obj.price}`;
   price.setAttribute("class", "price m-auto t-center");
   card.appendChild(price);
+
+  const bookDescription = document.createElement("p");
+
+  bookDescription.innerText = obj.description;
+
+  const closeBtn = document.createElement("button");
+
+  closeBtn.innerText = "Close";
+  closeBtn.setAttribute("class", "close");
+
+  const bookDescriptionSection = createSection(obj.title, 5);
+
+  bookDescriptionSection.appendChild(bookDescription);
+  bookDescriptionSection.appendChild(closeBtn);
+  bookDescriptionSection.setAttribute(
+    "class",
+    "pos-absolute b-description-position b-description p-25px d-hidden"
+  );
+  card.appendChild(bookDescriptionSection);
 
   const showMore = document.createElement("button");
 

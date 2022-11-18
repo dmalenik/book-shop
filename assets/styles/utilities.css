@@ -1,3 +1,11 @@
+.d-hidden {
+  display: none;
+}
+
+.d-shown {
+  display: block;
+}
+
 .f-row {
   display: flex;
 }
@@ -17,6 +25,14 @@
 
 .grid {
   display: grid;
+}
+
+.pos-absolute {
+  position: absolute;
+}
+
+.pos-relative {
+  position: relative;
 }
 
 .w-100 {

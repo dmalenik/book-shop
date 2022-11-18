@@ -49,3 +49,16 @@
 .bag {
   justify-self: end;
 }
+
+.b-description {
+  width: 275px;
+
+  background-color: #39f;
+}
+
+.b-description-position {
+  top: 95%;
+  left: 55%;
+
+  z-index: 1;
+}

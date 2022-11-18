@@ -1,4 +1,5 @@
 import createBookCard from "./createBookCard.mjs";
+import createEventListener from "./createEventListener.mjs";
 
 const createCatalog = (data) => {
   const list_unordered = document.createElement("ul");
@@ -15,6 +16,27 @@ const createCatalog = (data) => {
 
     li.appendChild(card);
   });
+
+  // place eventListeners directly near the trigger element
+  // at the end of the module
+
+  const clickShowMoreDelegation = createEventListener(
+    list_unordered,
+    "click",
+    (event) => {
+      let parentActiveElement = document.activeElement.parentElement;
+
+      if (event.target.classList.contains("more")) {
+        parentActiveElement
+          .querySelector(".b-description")
+          .classList.replace("d-hidden", "d-shown");
+      }
+
+      if (event.target.classList.contains("close")) {
+        parentActiveElement.classList.replace("d-shown", "d-hidden");
+      }
+    }
+  );
 
   return list_unordered;
 };
