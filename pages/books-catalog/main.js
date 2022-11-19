@@ -1,4 +1,4 @@
-import container from "../../modules/container.mjs";
+import containerFragment from "../../modules/container.mjs";
 
 import normalize from "../../assets/styles/normalize.css" assert { type: "css" };
 import global from "../../assets/styles/global.css" assert { type: "css" };
@@ -14,4 +14,4 @@ document.adoptedStyleSheets = [
   booksSectionCSS,
 ];
 
-document.body.appendChild(container);
+document.body.appendChild(containerFragment);

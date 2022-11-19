@@ -2,20 +2,27 @@ import createBookCard from "./createBookCard.mjs";
 import createEventListener from "./createEventListener.mjs";
 
 const createCatalog = (data) => {
-  const list_unordered = document.createElement("ul");
-
-  list_unordered.setAttribute("class", "grid p-25px catalog nobullets");
+  const listItemsFragment = document.createDocumentFragment();
 
   data.map((obj) => {
     let li = document.createElement("li");
 
     li.setAttribute("class", "item w-100 h-100 p-25px");
-    list_unordered.appendChild(li);
 
-    let card = createBookCard(obj);
+    let card = document.createElement("div");
+
+    card.setAttribute("class", "grid pos-relative card w-100");
+    card.appendChild(createBookCard(obj));
 
     li.appendChild(card);
+
+    listItemsFragment.append(li);
   });
+
+  const list_unordered = document.createElement("ul");
+
+  list_unordered.setAttribute("class", "grid p-25px catalog nobullets");
+  list_unordered.appendChild(listItemsFragment);
 
   // place eventListeners directly near the trigger element
   // at the end of the module

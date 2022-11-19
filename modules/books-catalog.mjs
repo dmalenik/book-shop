@@ -1,17 +1,22 @@
 import getFetch from "./getFetch.mjs";
 import createSection from "./createSection.mjs";
 import createCatalog from "./createCatalog.mjs";
-import container from "./container.mjs";
 
-const booksCatalogPath = "../../data/books.json";
-const booksCatalog = getFetch(booksCatalogPath).then((data) => {
-  const section = createSection("Books catalog", 3);
-  const catalog = createCatalog(data);
+const booksCatalogFragment = document.createDocumentFragment();
+const path = "../../data/books.json";
 
-  section.setAttribute("class", "f-col f-y-center");
-  section.appendChild(catalog);
+booksCatalogFragment.append(
+  // wait for the Promise to be resolved
 
-  container.appendChild(section);
-});
+  await getFetch(path).then((data) => {
+    const section = createSection("Books catalog", 3);
+    const catalog = createCatalog(data);
 
-export default booksCatalog;
+    section.setAttribute("class", "f-col f-y-center");
+    section.appendChild(catalog);
+
+    return section;
+  })
+);
+
+export default booksCatalogFragment;

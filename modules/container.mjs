@@ -1,7 +1,11 @@
-import booksCatalog from "./books-catalog.mjs";
+import booksCatalogFragment from "./books-catalog.mjs";
 
-const container = document.createElement("div");
+const containerFragment = document.createDocumentFragment();
+const div = document.createElement("div");
 
-container.setAttribute("class", "f-col container");
+div.setAttribute("class", "f-col container");
+div.appendChild(booksCatalogFragment);
 
-export default container;
+containerFragment.append(div);
+
+export default containerFragment;
